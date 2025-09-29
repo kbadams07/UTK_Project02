@@ -21,3 +21,14 @@ body{
 .hint{color:var(--muted); margin:0 0 14px;}
 /* Accessibility helper */
 .visually-hidden{position:absolute!important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap;}
+/* Search form inline (desktop) */
+.search-form{ display:flex; gap:var(--gap); margin-bottom:10px; }
+.search-form input[type="search"]{
+  flex:1; min-width:0; padding:12px 14px; border-radius:10px;
+  border:1px solid #2a2f3c; background:#0e121a; color:var(--text);
+}
+.search-form button{
+  padding:12px 16px; border:none; border-radius:10px;
+  background:linear-gradient(90deg, var(--accent), var(--accent-2));
+  color:#0b0d12; font-weight:700; cursor:pointer;
+}
