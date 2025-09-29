@@ -79,3 +79,37 @@ body, .site-header, .site-footer, .card, .main-nav a, .search-form input[type="s
 /* Make sure form controls look right per theme */
 :root{ color-scheme: dark; }
 [data-theme="light"]{ color-scheme: light; }
+
+/* === THEME: force tokens + body repaint === */
+:root{
+  --bg:#0f1115;       /* dark defaults */
+  --card:#171923;
+  --text:#e6e6e6;
+  --muted:#9aa3b2;
+  --accent:#a7f3d0;
+  --accent-2:#60a5fa;
+}
+
+/* Light tokens applied when <html data-theme="light"> */
+html[data-theme="light"]{
+  --bg:#f7f7fb;
+  --card:#ffffff;
+  --text:#111318;
+  --muted:#5a6371;
+  --accent:#2563eb;
+  --accent-2:#22c55e;
+}
+
+/* Make sure body actually repaints with the active --bg */
+html[data-theme="light"] body{ background: var(--bg); }
+html[data-theme="dark"]  body{ background: var(--bg); }
+
+/* /Override hard-coded dark backgrounds, */
+html[data-theme="light"] .site-header{ background:#ffffff; border-bottom:1px solid #e5e7eb; }
+html[data-theme="light"] .site-footer{ color:#4b5563; border-top:1px solid #e5e7eb; }
+html[data-theme="light"] .main-nav a:hover{ background:#eef2ff; }
+html[data-theme="light"] .search-form input[type="search"]{
+  background:#ffffff; border:1px solid #d1d5db; color:var(--text);
+}
+html[data-theme="light"] .card{ border-color:#e5e7eb; box-shadow:0 2px 12px rgba(0,0,0,.08); }
+html[data-theme="light"] .card img{ background:#f3f4f6; }
