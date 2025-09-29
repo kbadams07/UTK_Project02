@@ -38,3 +38,28 @@ body{ margin:0; font-family:"Onest",system-ui,-apple-system,Segoe UI,Roboto,Aria
   .search-form{ flex-direction:column; }
   .col{ flex:1 1 100%; min-width:0; }
 }
+
+/* === THEME: Light mode (default is dark) === */
+:root { color-scheme: dark; }
+
+/* Flip tokens for light theme */
+[data-theme="light"]{
+  --bg:#f7f7fb;
+  --card:#ffffff;
+  --text:#111318;
+  --muted:#5a6371;
+  --accent:#2563eb;
+  --accent-2:#22c55e;
+}
+
+/* Components that used non-token colors need explicit light overrides */
+[data-theme="light"] .site-header{ background:#ffffff; border-bottom:1px solid #e5e7eb; }
+[data-theme="light"] .site-footer{ color:#4b5563; border-top:1px solid #e5e7eb; }
+[data-theme="light"] .main-nav a:hover{ background:#eef2ff; }
+
+/* Inputs/cards/images that referenced hardcoded dark shades */
+[data-theme="light"] .search-form input[type="search"]{
+  background:#ffffff; border:1px solid #d1d5db; color:var(--text);
+}
+[data-theme="light"] .card{ border-color:#e5e7eb; box-shadow:0 2px 12px rgba(0,0,0,.08); }
+[data-theme="light"] .card img{ background:#f3f4f6; }
