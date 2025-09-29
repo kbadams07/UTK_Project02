@@ -30,8 +30,71 @@ window.addEventListener('DOMContentLoaded', async () => {
   }
 });
 
-// placeholder
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  resultsEl.innerHTML = '<p class="hint">Breed list loaded. Hooking up search next…</p>';
+  const term = queryInput.value.trim().toLowerCase();
+  if (!term) return;
+
+  resultsEl.innerHTML = ''; // clear previous
+
+  // Find matching breeds by substring; fallback to raw term if list failed
+  const matches = BREEDS.length
+    ? BREEDS.filter(b => b.label.includes(term))
+    : [{ label: term, path: term }];
+
+  if (matches.length === 0) {
+    resultsEl.innerHTML = `<p class="hint">No matching breeds. Try another word (e.g., "shep", "retr", "bull").</p>`;
+    return;
+  }
+
+  // small fan-out to not spam the API
+  const MAX_RESULTS = 24;
+  const MAX_BREEDS = 6;
+  const picks = matches.slice(0, MAX_BREEDS);
+  const perBreed = Math.max(3, Math.floor(MAX_RESULTS / picks.length));
+
+  try {
+    const frag = document.createDocumentFragment();
+
+    for (const b of picks) {
+      const url = `https://dog.ceo/api/breed/${b.path}/images/random/${perBreed}`;
+      const res = await fetch(url);
+      if (!res.ok) continue;
+      const data = await res.json();
+      const images = Array.isArray(data?.message) ? data.message : [];
+
+      images.forEach((src) => {
+        const col = document.createElement('div');
+        col.className = 'col';
+
+        const card = document.createElement('article');
+        card.className = 'card';
+
+        const img = document.createElement('img');
+        img.loading = 'lazy';
+        img.alt = b.label + ' dog';
+        img.src = src;
+
+        const meta = document.createElement('div');
+        meta.className = 'meta';
+        meta.innerHTML = `<span>${b.label}</span><span>Random</span>`;
+
+        card.appendChild(img);
+        card.appendChild(meta);
+        col.appendChild(card);
+        frag.appendChild(col);
+      });
+    }
+
+    if (!frag.childNodes.length) {
+      resultsEl.innerHTML = `<p class="hint">No images returned. Try a different breed.</p>`;
+      return;
+    }
+
+    resultsEl.appendChild(frag);
+  } catch (err) {
+    console.error(err);
+    resultsEl.innerHTML = `<p class="hint">Something went wrong. Check your internet connection and try again.</p>`;
+  }
 });
+
