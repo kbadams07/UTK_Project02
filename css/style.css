@@ -46,3 +46,10 @@ body{
 
 /* Footer */
 .site-footer{ padding:28px clamp(16px,4vw,48px); color:var(--muted); border-top:1px solid #232632; }
+/* Mobile (<=320px) stacks */
+@media (max-width: 320px){
+  .site-header{ flex-direction:column; align-items:stretch; gap:8px; }
+  .main-nav{ flex-direction:column; gap:8px; }
+  .search-form{ flex-direction:column; }
+  .col{ flex:1 1 100%; min-width:0; } /* single-column images */
+}
