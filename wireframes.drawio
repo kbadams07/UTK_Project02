@@ -1,0 +1,87 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36" version="28.2.5" pages="2">
+  <diagram id="desktop" name="Desktop Wireframe">
+    <mxGraphModel dx="1042" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="brand" value="Doggo Gallery" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="40" y="35" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nav" value="Contact" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="980" y="35" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="card1" value="Image" style="rounded=1;fillColor=#ffffff;strokeColor=#888888;" parent="1" vertex="1">
+          <mxGeometry x="60" y="189" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="card2" value="Image" style="rounded=1;fillColor=#ffffff;strokeColor=#888888;" parent="1" vertex="1">
+          <mxGeometry x="380" y="189" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="card3" value="Image" style="rounded=1;fillColor=#ffffff;strokeColor=#888888;" parent="1" vertex="1">
+          <mxGeometry x="700" y="189" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="3UCxHWMvg37mB54qWWV9-1" value="About" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="880" y="35" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3UCxHWMvg37mB54qWWV9-2" value="Explore" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="780" y="35" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3UCxHWMvg37mB54qWWV9-3" value="Search Bar" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="40" y="117" width="760" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3UCxHWMvg37mB54qWWV9-4" value="Search" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="840" y="117" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3UCxHWMvg37mB54qWWV9-5" value="Image" style="rounded=1;fillColor=#ffffff;strokeColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="700" y="399" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="3UCxHWMvg37mB54qWWV9-6" value="Image" style="rounded=1;fillColor=#ffffff;strokeColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="380" y="399" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="3UCxHWMvg37mB54qWWV9-7" value="Image" style="rounded=1;fillColor=#ffffff;strokeColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="60" y="399" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="3UCxHWMvg37mB54qWWV9-8" value="Image" style="rounded=1;fillColor=#ffffff;strokeColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="700" y="609" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="3UCxHWMvg37mB54qWWV9-9" value="Image" style="rounded=1;fillColor=#ffffff;strokeColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="380" y="609" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="3UCxHWMvg37mB54qWWV9-10" value="Image" style="rounded=1;fillColor=#ffffff;strokeColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="60" y="609" width="300" height="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="mobile" name="Mobile Wireframe">
+    <mxGraphModel dx="1042" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="385" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="mbrand" value="Doggo Gallery" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="40" y="20" width="305" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="mnav" value="Explore" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="40" y="70" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mcard1" value="Image" style="rounded=1;fillColor=#ffffff;strokeColor=#888888;" parent="1" vertex="1">
+          <mxGeometry x="55" y="273" width="275" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="mcard2" value="Image" style="rounded=1;fillColor=#ffffff;strokeColor=#888888;" parent="1" vertex="1">
+          <mxGeometry x="55" y="443" width="275" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="RvXe-3CnnKmIFm5EYhR8-1" value="About" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="RvXe-3CnnKmIFm5EYhR8-2" value="Contact" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="40" y="168" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="RvXe-3CnnKmIFm5EYhR8-3" value="Search Bar" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="41" y="212" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="RvXe-3CnnKmIFm5EYhR8-4" value="Search" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="281" y="212" width="70" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
