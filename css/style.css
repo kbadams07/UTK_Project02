@@ -70,3 +70,12 @@ body{
 .theme-toggle:hover{ background:rgba(255,255,255,.06); }
 [data-theme="light"] .theme-toggle{ border-color:#d1d5db; }
 [data-theme="light"] .theme-toggle:hover{ background:#eef2ff; }
+
+/* Smoothen theme swaps */
+body, .site-header, .site-footer, .card, .main-nav a, .search-form input[type="search"], .theme-toggle{
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+/* Make sure form controls look right per theme */
+:root{ color-scheme: dark; }
+[data-theme="light"]{ color-scheme: light; }

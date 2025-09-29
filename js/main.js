@@ -145,3 +145,18 @@ document.addEventListener("click", (e) => {
   applyTheme(next);
   try { localStorage.setItem(THEME_KEY, next); } catch(_) {}
 });
+
+// === THEME: auto-sync with OS if user hasn't chosen explicitly ===
+const mqLight = window.matchMedia("(prefers-color-scheme: light)");
+function maybeSyncWithOS(e){
+  // Only auto-apply if user hasn't made an explicit choice
+  const saved = localStorage.getItem(THEME_KEY);
+  if (saved === "light" || saved === "dark") return;
+  applyTheme(e.matches ? "light" : "dark");
+}
+try {
+  mqLight.addEventListener("change", maybeSyncWithOS);
+} catch {
+  // Safari <14 fallback
+  mqLight.addListener(maybeSyncWithOS);
+}
