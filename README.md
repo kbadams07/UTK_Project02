@@ -24,6 +24,10 @@ Single page website that lets users search for dog images by breed using the fre
 2. Add a dropdown with auto-complete suggestions
 3. Add a "favorites" feature to save images
 
+## User Stories
+1. As a visitor, I want to type a full or partial dog breed and press Search, so I can quickly see matching dog images.
+2. As a visitor, I want the results displayed in a readable, responsive grid, so I can scan multiple images without scrolling forever.
+3. As a mobile user on a very small screen (≤320px), I want the layout to stack cleanly, so the site remains usable.
 
 ## Live Site
 https://kbadams07.github.io/UTK_Project02/
