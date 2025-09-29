@@ -136,3 +136,12 @@ form.addEventListener('submit', async (e) => {
   }
 });
 
+// === THEME: toggle behavior and persistence ===
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest("#theme-toggle");
+  if (!btn) return;
+  const current = document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+  const next = current === "light" ? "dark" : "light";
+  applyTheme(next);
+  try { localStorage.setItem(THEME_KEY, next); } catch(_) {}
+});
