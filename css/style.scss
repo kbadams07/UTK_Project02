@@ -1,0 +1,4 @@
+// Optional SASS (not required to run)
+$bg:#0f1115; $card:#171923; $text:#e6e6e6; $muted:#9aa3b2; $gap:12px;
+body{ background:$bg; color:$text; }
+.site-header{ display:flex; justify-content:space-between; }

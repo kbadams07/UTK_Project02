@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doggo Gallery — Dog Image Generator</title>
+
+  <!-- Google Font (new to you) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Required structure: css/style.css -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header: brand left, nav right (we'll style with flex) -->
+  <header class="site-header">
+    <div class="brand">Doggo Gallery</div>
+    <nav class="main-nav">
+      <a href="#explore">Explore</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="explore" class="search-section">
+      <!-- Input + submit (we'll make these inline with flex on desktop) -->
+      <form id="search-form" class="search-form" autocomplete="off">
+        <input id="query" type="search" placeholder="Type a breed (e.g., retr, shep, shiba, bull)..." aria-label="Search dog breeds" required />
+        <button type="submit">Search</button>
+      </form>
+      <p class="hint">Try partial names like <em>retr</em>, <em>shep</em>, or <em>bull</em>.</p>
+    </section>
+
+    <!-- Results grid goes here -->
+    <section class="results-section">
+      <h2 class="visually-hidden">Results</h2>
+      <div id="results" class="row grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Images via the free <a href="https://dog.ceo/dog-api/" target="_blank" rel="noreferrer">Dog CEO API</a></small>
+  </footer>
+
+  <!-- Required structure: js/main.js -->
+  <script src="js/main.js"></script>
+</body>
+</html>
