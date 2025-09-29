@@ -32,3 +32,17 @@ body{
   background:linear-gradient(90deg, var(--accent), var(--accent-2));
   color:#0b0d12; font-weight:700; cursor:pointer;
 }
+/* Custom flex grid */
+.row.grid{ display:flex; flex-wrap:wrap; gap:var(--gap); }
+.col{ flex:1 1 calc(33.333% - var(--gap)); min-width:240px; }
+
+/* Card styles */
+.card{
+  background:var(--card); border:1px solid #232632; border-radius:14px; overflow:hidden;
+  box-shadow:0 2px 12px rgba(0,0,0,.25);
+}
+.card img{ width:100%; height:220px; object-fit:cover; display:block; background:#0e121a; }
+.meta{ padding:10px 12px; color:var(--muted); font-size:12px; display:flex; align-items:center; justify-content:space-between; }
+
+/* Footer */
+.site-footer{ padding:28px clamp(16px,4vw,48px); color:var(--muted); border-top:1px solid #232632; }
