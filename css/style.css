@@ -53,3 +53,9 @@ body{
   .search-form{ flex-direction:column; }
   .col{ flex:1 1 100%; min-width:0; } /* single-column images */
 }
+/* Button hover */
+.search-form button:hover{ filter:brightness(1.05); }
+
+/* Focus ring */
+.search-form input[type="search"]:focus,
+.search-form button:focus{ outline:2px solid var(--accent-2); outline-offset:2px; }
