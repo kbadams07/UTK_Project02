@@ -25,3 +25,9 @@ Single page website that lets users search for dog images by breed using the fre
 3. Add a "favorites" feature to save images
 
 
+## Live Site
+https://kbadams07.github.io/UTK_Project02/
+
+## Repo
+https://github.com/kbadams07/UTK_Project02
+
