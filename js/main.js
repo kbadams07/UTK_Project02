@@ -3,11 +3,48 @@ const form = document.getElementById('search-form');
 const queryInput = document.getElementById('query');
 const resultsEl = document.getElementById('results');
 
+// === THEME: initialization helpers ===
+const THEME_KEY = "theme"; // "light" | "dark"
+
+function getPreferredTheme(){
+  const saved = localStorage.getItem(THEME_KEY);
+  if (saved === "light" || saved === "dark") return saved;
+  // fall back to OS preference
+  return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+}
+
+function applyTheme(theme){
+  const t = theme === "light" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", t);
+  updateToggleUI(t);
+}
+
+function updateToggleUI(theme){
+  const btn = document.getElementById("theme-toggle");
+  if (!btn) return;
+  // Icon: show opposite action
+  if (theme === "light"){
+    btn.textContent = "🌙";
+    btn.title = "Switch to dark";
+    btn.setAttribute("aria-pressed", "true");
+  } else {
+    btn.textContent = "☀️";
+    btn.title = "Switch to light";
+    btn.setAttribute("aria-pressed", "false");
+  }
+}
+
+
 // Will hold {label, path} items, e.g., {label:'bulldog french', path:'bulldog/french'}
 let BREEDS = [];
 
 // 1) Load the full breed list at startup
 window.addEventListener('DOMContentLoaded', async () => {
+  // 1) Initialize theme
+  const initial = getPreferredTheme();
+  applyTheme(initial);
+
+  // 2) Load Dog CEO breed list
   try {
     const res = await fetch('https://dog.ceo/api/breeds/list/all');
     if (!res.ok) throw new Error('Failed to load breed list');
@@ -29,6 +66,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     // Non-fatal: can still try the raw term the user types
   }
 });
+
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
